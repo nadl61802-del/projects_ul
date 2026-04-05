@@ -51,6 +51,24 @@ img {
     height: auto;
 }
 
+section {
+    padding-block: 7rem 2rem;
+    z-index: 1000;
+}
+
+.section__subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: rgba(94, 98, 130, 1);
+
+}
+
+.section__title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
 /* header */
 
 .header {
@@ -59,25 +77,25 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 900;
+    z-index: 10000;
     transition: background-color .4s, box-shadow .4s;
     background: #ffffff;
     border-bottom: 1px solid #f0f0f0;
 
 }
 
-.header::before {
+.page-bg {
     background-image: url(../image/home-img-2.webp);
     transform: rotate(0deg);
     background-size: cover;
-    content: "";
     position: absolute;
-    Width: 766.31px;
-    Height: 872.58px;
-    Top: -149px;
-    right: 0;
-    z-index: -50;
+    width: 656.31px;
+    height: 100%;
+    top: -62px;
+    right: -150px;
+    z-index: -10;
     overflow: hidden;
+    pointer-events: none;
 }
 
 
@@ -142,6 +160,7 @@ img {
     display: flex;
     align-items: center;
     gap: 2rem;
+    z-index: 1001;
 }
 
 .nav-overlay {
@@ -151,7 +170,7 @@ img {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease;
-    z-index: 40;
+    z-index: 900;
 }
 
 .nav-overlay.show {
@@ -195,7 +214,7 @@ img {
 .nav .nav-menu .nav-list {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     list-style: none;
 }
 
@@ -266,9 +285,8 @@ img {
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 32px 0 80px;
     margin-top: 5rem;
-    z-index: 5000;
+    z-index: 1;
 }
 
 
@@ -278,6 +296,11 @@ img {
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     gap: 2.5rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-tag {
@@ -371,38 +394,586 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9000;
+    z-index: 1;
 
 }
 
 .hero-img {
     width: 100%;
     max-width: 520px;
-    z-index: 50;
+    z-index: 3;
 }
 
 .plane {
     position: absolute;
-    width: 90px;
+    width: clamp(48px, 9vw, 90px);
     height: auto;
     pointer-events: none;
+    z-index: 1;
 }
 
 .plane-1 {
     top: 10%;
     left: 13%;
+    z-index: 0;
 
 }
 
 .plane-2 {
     top: 10%;
     right: 5%;
-    z-index: -10;
+    z-index: 1;
+}
+
+.services-section {
+    position: relative;
+    padding: 70px 0 90px;
+    overflow: hidden;
+}
+
+/* dots grid — lg فقط (≥992px) */
+.dots-grid {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: none;
+    /* مخفية بشكل افتراضي */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 9px;
+}
+
+@media (min-width: 992px) {
+    .dots-grid {
+        display: grid;
+        /* تظهر فقط على شاشات lg+ */
+    }
+}
+
+.dots-grid span {
+    padding: 0 4px;
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1;
+}
+
+.dots-grid span:nth-child(1) {
+    color: #DF6951;
+}
+
+.dots-grid span:nth-child(13) {
+    color: #05eb19ee;
+}
+
+/* card base */
+.service-card {
+    border: none;
+    background: transparent;
+    text-align: center;
+    padding: 28px 18px 22px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: transparent;
+    z-index: 0;
+    transition: background-color 0.25s ease;
+    pointer-events: none;
+}
+
+.service-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, .07);
+}
+
+.service-card:hover::before {
+    background: #fff;
+}
+
+/* active card */
+.service-card.active {
+    box-shadow: 0 24px 64px rgba(0, 0, 0, .10);
+    transform: translateY(-8px);
+    z-index: 2;
+}
+
+.service-card.active::before {
+    background: #fff;
+}
+
+/* الشكل البرتقالي تحت الكارد الـ active — مظبوط زي الصورة */
+.service-card.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -26px;
+    left: -25px;
+    width: 60px;
+    height: 56px;
+    background: #DF6951;
+    border-radius: 28% 0 14% 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* icon wrap */
+.icon-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 110px;
+    height: 100px;
+    margin-bottom: 18px;
+}
+
+.icon-wrap .blob {
+    position: absolute;
+    bottom: 0;
+    width: 54px;
+    height: 54px;
+    border-radius: 12px 8px 12px 8px;
+}
+
+.icon-wrap .blob-two {
+    position: absolute;
+    top: 0;
+    width: 54px;
+    height: 54px;
+    border-radius: 12px 8px 12px 8px;
+}
+
+.blob-peach {
+    background: #FFF1DA;
+    right: 14px;
+}
+
+.blob-green {
+    background: #D5F5F6;
+    left: 14px;
+    border-radius: 8px 12px 8px 12px;
+}
+
+.blob-purple {
+    background: #F4D7FF;
+    right: 14px;
+}
+
+.icon-wrap img {
+    position: relative;
+    z-index: 2;
+    max-height: 82px;
+    max-width: 90px;
+    object-fit: contain;
+}
+
+.icon-wrap img.hotel-img {
+    max-width: 52px;
+}
+
+.card-text:last-child {
+    margin: 30px 4px;
+}
+
+/* start flights */
+.flights-section {
+    padding: 60px 0;
+}
+
+.flights-section .trip-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, .07);
+    transition: transform .25s ease, box-shadow .25s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.flights-section .trip-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, .13);
+}
+
+.flights-section .trip_card_image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    overflow: hidden;
+    background: #f3f3f3;
+}
+
+.flights-section .trip_card_image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.flights-section .trip-card .card-body {
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.flights-section .trip-card .card-title,
+.flights-section .trip-card .card-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.flights-section .trip-card .trip-card__meta {
+    font-size: .85rem;
+    color: #999;
+    font-weight: 500;
+    margin-top: auto;
+}
+
+/* bookings-swiper  */
+.bookings {
+    padding: 80px 0;
+    background: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow: hidden;
+    --testimonial-card-height: 280px;
+    --testimonial-peek: 0px;
+}
+
+/* ---- layout ---- */
+.bookings__inner {
+    display: flex;
+    align-items: center;
+}
+
+/* =========================================
+       LEFT SIDE
+    ========================================= */
+.bookings__left {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.bookings__subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.bookings__title {
+    font-size: clamp(2rem, 3.5vw, 9.6rem);
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.18;
+    margin-bottom: 48px;
+}
+
+/* pagination dots */
+.bookings-pagination {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.bookings-pagination .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bookings-pagination .swiper-pagination-bullet-active {
+    background: #1a1a2e;
+}
+
+/* =========================================
+       RIGHT SIDE
+    ========================================= */
+.bookings__right {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.swiper-outer {
+    flex: 1;
+    min-width: 0;
+    height: var(--testimonial-card-height);
+    overflow: hidden;
+}
+
+.mySwiper {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* vertical direction */
+.mySwiper.swiper-vertical .swiper-wrapper {
+    flex-direction: column;
+}
+
+/* =========================================
+       NAV ARROWS
+    ========================================= */
+.bookings__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.bookings__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid #e0e0e0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.bookings__btn:hover {
+    background: #1a1a2e;
+    border-color: #1a1a2e;
+}
+
+.bookings__btn:hover svg {
+    stroke: #fff;
+}
+
+.bookings__btn svg {
+    stroke: #1a1a2e;
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2.2;
+    transition: stroke 0.2s;
+}
+
+.swiper-slide {
+    height: var(--testimonial-card-height) !important;
+    padding: 4px 2px;
+
+}
+
+/* الكارد الصغير (غير active) */
+.testimonial-card {
+    background: #f7f7f7;
+    border-radius: 16px;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    height: 100%;
+}
+
+/* الكارد الكبير (active) */
+.swiper-slide-active .testimonial-card {
+    background: #fff;
+    border-color: #efefef;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 28px 28px 24px;
+}
+
+/* avatar */
+.t-avatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+    margin-bottom: 8px;
+}
+
+.swiper-slide-active .t-avatar {
+    margin-bottom: 16px;
+}
+
+/* mini info (على الكارد الصغير) */
+.t-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.swiper-slide-active .t-mini {
+    display: none;
+}
+
+.t-mini-name {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.t-mini-loc {
+    font-size: 0.78rem;
+    color: #aaa;
+}
+
+/* full content (على الكارد الـ active) */
+.t-full {
+    display: none;
+    width: 100%;
+}
+
+.swiper-slide-active .t-full {
+    display: block;
+}
+
+.t-quote {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 22px;
+    position: relative;
+    padding-top: 8px;
+}
+
+.t-quote::before {
+    content: '\201C';
+    font-size: 4rem;
+    color: #1a1a2e;
+    opacity: 0.08;
+    position: absolute;
+    top: -14px;
+    left: -4px;
+    font-family: serif;
+    line-height: 1;
+}
+
+.t-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin-bottom: 18px;
+}
+
+.t-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.t-name {
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 3px;
+}
+
+.t-loc {
+    font-size: 0.78rem;
+    color: #bbb;
+}
+
+.t-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.t-stars span {
+    color: #F4B942;
+    font-size: 13px;
+}
+
+
+
+
+
+/* responsive */
+@media (max-width: 575px) {
+
+    /* xs: شيل الرفع والـ after عشان مش هيبان كويس */
+    .service-card.active {
+        transform: none;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, .09);
+    }
+
+    .service-card.active::after {
+        display: none;
+    }
+
+    .bookings {
+        padding: 50px 0;
+        --testimonial-card-height: 340px;
+    }
+
+    .testimonial-card {
+        padding: 16px 16px;
+    }
+
+    .swiper-slide-active .testimonial-card {
+        padding: 22px 18px 18px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    /* sm (2 كولومن): آخر كارد لو فردي يتوسط */
+    .row-cols-sm-2 .col:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .service-card.active::after {
+        bottom: -22px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* md+: اعمل align-items center عشان الكارد الـ active يبان مرفوع */
+    .row {
+        align-items: center;
+    }
+
 }
 
 @media (max-width: 992px) {
     .nav {
-        padding: 0.9rem 0;
+        padding: 0.9rem 10px;
     }
 
     .nav-toggle {
@@ -438,7 +1009,7 @@ img {
         transform: translateX(-105%);
         pointer-events: none;
         transition: transform 0.25s ease;
-        z-index: 50;
+        z-index: 1001;
         overflow-y: auto;
     }
 
@@ -508,12 +1079,20 @@ img {
         display: inline-flex;
     }
 
-    .header::before {
+    .page-bg {
+        display: none;
+    }
+
+    .dots-grid {
         display: none;
     }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 900px) {
+    .bookings {
+        --testimonial-card-height: 320px;
+    }
+
     .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
@@ -534,20 +1113,37 @@ img {
 
     .hero-media {
         order: 1;
-        z-index: -10;
     }
 
-    .plane {
-        width: 64px;
+    .bookings__inner {
+        flex-direction: column;
+        gap: 40px;
     }
 
-    .plane-1 {
-        top: 11%;
-        left: 23%;
+    .bookings__left {
+        flex: none;
+        width: 100%;
+        text-align: center;
     }
 
-    .plane-2 {
-        top: 16%;
-        right: 15%;
+    .bookings-pagination {
+        justify-content: center;
+    }
+
+    /* السهمين يبقو جنب بعض تحت الـ swiper */
+    .bookings__right {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .bookings__nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .swiper-outer {
+        width: 100%;
     }
 }

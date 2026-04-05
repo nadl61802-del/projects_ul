@@ -40,3 +40,33 @@ if (navClose) {
 if (navOverlay) {
     navOverlay.addEventListener("click", closeMenu);
 }
+
+// bookings-swiper
+  new Swiper('.mySwiper', {
+    direction: 'vertical',   // التنقل فوق وتحت
+    slidesPerView: 1,        // show one slide
+    spaceBetween: 16,
+    loop: true,
+    centeredSlides: false,
+    autoHeight: false,
+    breakpoints: {
+      0: {
+        direction: 'horizontal',
+      },
+      900: {
+        direction: 'vertical',
+      },
+    },
+    pagination: {
+      el: '.bookings-pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '.bookings-prev',
+      nextEl: '.bookings-next',
+    },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+  });
