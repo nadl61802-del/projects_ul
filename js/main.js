@@ -43,8 +43,8 @@ if (navOverlay) {
 
 // bookings-swiper
   new Swiper('.mySwiper', {
-    direction: 'vertical',   // التنقل فوق وتحت
-    slidesPerView: 1,        // show one slide
+    direction: 'vertical', 
+    slidesPerView: 1,        
     spaceBetween: 16,
     loop: true,
     centeredSlides: false,
