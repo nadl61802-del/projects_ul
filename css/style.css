@@ -1433,18 +1433,18 @@ section {
 /* footer */
 footer {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 3.5rem 0 2rem;
     background: #ffffff;
 }
 
 .footer-top {
-    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 1.5rem 2.5rem;
+    padding: 0 0 2.5rem;
     display: grid;
     grid-template-columns: 1.6fr repeat(3, 1fr) 1.2fr;
     gap: 2.2rem;
+    justify-content: space-between;
     border-bottom: 1px solid #f3f3f7;
 }
 
@@ -1495,7 +1495,6 @@ footer {
 }
 
 /* Social + App */
-.footer-social-col {}
 
 .footer-socials {
     display: flex;
