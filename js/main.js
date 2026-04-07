@@ -58,15 +58,68 @@ if (navOverlay) {
       },
     },
     pagination: {
-      el: '.bookings-pagination',
+      el: '.testimonials-pagination',
       clickable: true,
     },
     navigation: {
-      prevEl: '.bookings-prev',
-      nextEl: '.bookings-next',
+      prevEl: '.testimonials-prev',
+      nextEl: '.testimonials-next',
     },
     autoplay: {
       delay: 3500,
       disableOnInteraction: false,
     },
   });
+
+// partners swiper (small screens)
+let partnersSwiper = null;
+
+const initPartnersSwiper = () => {
+  const section = document.querySelector(".prtemans");
+  const swiperEl = document.querySelector(".prtemans-swiper");
+  if (!section || !swiperEl) {
+    return;
+  }
+
+  const shouldEnable = window.innerWidth <= 768;
+
+  if (shouldEnable && !partnersSwiper) {
+    section.classList.add("is-swiper");
+    partnersSwiper = new Swiper(".prtemans-swiper", {
+      slidesPerView: 2.2,
+      spaceBetween: 16,
+      loop: true,
+      speed: 600,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".prtemans-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        480: {
+          slidesPerView: 3,
+        },
+        640: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  }
+
+  if (!shouldEnable && partnersSwiper) {
+    partnersSwiper.destroy(true, true);
+    partnersSwiper = null;
+    section.classList.remove("is-swiper");
+  }
+};
+
+let partnersResizeTimer = null;
+window.addEventListener("resize", () => {
+  clearTimeout(partnersResizeTimer);
+  partnersResizeTimer = setTimeout(initPartnersSwiper, 150);
+});
+
+initPartnersSwiper();
