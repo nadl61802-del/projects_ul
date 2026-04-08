@@ -26,79 +26,121 @@
 
 <body>
 
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" title="Jadoo" aria-label="Jadoo" class="logo">Jad<span class="logo_one">o</span><span
+    <header class="header position-fixed top-0 start-0 w-100 border-bottom" id="header">
+        <nav class="nav container position-relative d-flex align-items-center justify-content-between gap-3">
+            <a href="#" title="Jadoo" aria-label="Jadoo" class="logo fw-bold">Jad<span class="logo_one">o</span><span
                     class="logo_two">o</span></a>
 
-            <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation"
-                aria-expanded="false" aria-controls="nav-menu">
+            <button
+                class="nav-toggle d-lg-none flex-column gap-1 p-2 bg-lg-transparent border-lg-0 rounded-2 cursor-pointer"
+                id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <div class="nav-menu" id="nav-menu">
-                <button class="nav-close" id="nav-close" type="button" aria-label="Close menu"></button>
-                <ul class="nav-list  mb-0">
-                    <li><a class="nav-link active" title="Destinations" aria-label="Destinations"
-                            href="#destination">Destinations</a></li>
-                    <li><a class="nav-link" title="Hotels" aria-label="Hotels" href="#hotels">Hotels</a></li>
-                    <li><a class="nav-link" title="Flights" aria-label="Flights" href="#flights">Flights</a></li>
-                    <li><a class="nav-link" title="booking" aria-label="booking" href="#booking">booking</a></li>
-                    <li><a class="nav-link" title="testimonials" aria-label="testimonials"
-                            href="#testimonials">testimonials</a></li>
+            <div class="nav-menu d-flex align-items-center gap-4" id="nav-menu">
+
+                <button class="nav-close d-lg-none position-absolute border rounded-3" id="nav-close" type="button"
+                    aria-label="Close menu"></button>
+
+                <ul class="nav-list  d-flex align-items-center gap-3 list-unstyled mb-0">
+
+                    <li>
+                        <a class="nav-link active" title="Destinations" aria-label="Destinations"
+                            href="#destination">Destinations</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" title="Hotels" aria-label="Hotels" href="#hotels">
+                            Hotels
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" title="Flights" aria-label="Flights" href="#flights">
+                            Flights
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" title="booking" aria-label="booking" href="#booking">
+                            booking
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" title="testimonials" aria-label="testimonials" href="#testimonials">
+                            testimonials
+                        </a>
+                    </li>
+
                 </ul>
 
-                <div class="nav-actions">
-                    <a class="btn btn-outline" title="Sign up" aria-label="Sign up" href="#sign-up">Sign up</a>
-                    <button class="lang" type="button">EN <span class="chev" aria-hidden="true"></span></button>
+                <div class="nav-actions d-flex align-items-center justify-content-center gap-3">
+
+                    <a class="btn  d-inline-flex align-items-center justify-content-center fw-semibold rounded-3"
+                        title="Sign up" aria-label="Sign up" href="#sign-up">Sign up</a>
+
+                    <button class="lang d-inline-flex align-items-center gap-1 fw-semibold bg-white border-0 text-dark"
+                        type="button">EN <i class="fa-solid fa-angle-down"></i></button>
                 </div>
 
             </div>
-            <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+            <div class="nav-overlay position-fixed top-0 start-0 w-100 h-100 pe-none" id="nav-overlay"
+                aria-hidden="true"></div>
         </nav>
 
     </header>
 
     <main>
-        <section class="hero" id="destination">
-            <span class="page-bg" aria-hidden="true"></span>
+        <section class="hero position-relative overflow-hidden" id="destination">
 
-            <div class="container hero-inner">
-                <div class="hero-content">
-                    <span class="hero-tag">BEST DESTINATIONS AROUND THE WORLD</span>
-                    <h1 class="hero-title">Travel, <span class="underline">enjoy</span> and live a new and full life
+            <span class="page-bg position-absolute h-100 overflow-hidden pe-none" aria-hidden="true"></span>
+
+            <div class="container hero-inner align-items-center d-grid gap-4">
+                <div class="hero-content position-relative">
+
+                    <span class="hero-tag d-inline-block text-uppercase fw-bold mb-4">BEST DESTINATIONS AROUND THE
+                        WORLD</span>
+                    <h1 class="hero-title lh-sm mb-4">Travel, <span
+                            class="underline d-inline-block position-relative">enjoy</span> and live a new and full life
                     </h1>
-                    <p class="hero-text">
+                    <p class="hero-text mb-4">
                         Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it
                         engrossed listening. Park gate sell they west hard for the.
                     </p>
 
-                    <div class="hero-actions">
-                        <a href="#more" title="Find out more" aria-label="Find out more" class="btn">Find out more</a>
-                        <a href="#demo" title="Play Demo" aria-label="Play Demo" class="play">
-                            <span class="play-icon"></span>
-                            <span class="play-text">Play Demo</span>
+                    <div class="hero-actions d-flex align-items-center flex-wrap gap-4">
+                        <a href="#more" title="Find out more" aria-label="Find out more " class="btn text-white">Find
+                            out more</a>
+                        <a href="#demo" title="Play Demo" aria-label="Play Demo"
+                            class="play d-inline-flex align-items-center fw-semibold gap-3">
+                            <span class="play-icon d-grid rounded-circle"></span>
+                            <span class="play-text fs-6">Play Demo</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="hero-media">
-                    <img class="hero-img img-fluid" width="100" height="100" loading="lazy" src="image/home-img.webp"
-                        alt="Traveler">
-                    <img class="plane plane-1 img-fluid" width="100" height="100" loading="lazy"
-                        src="image/service-2.webp" alt="Traveler" aria-hidden="true">
-                    <img class="plane plane-2 img-fluid" width="100" height="100" loading="lazy"
-                        src="image/service-2.webp" alt="Traveler" aria-hidden="true">
+                <div class="hero-media d-flex align-content-center justify-content-center position-relative">
+
+                    <img class="hero-img img-fluid w-100" width="100" height="100" loading="lazy"
+                        src="image/home-img.webp" alt="Traveler">
+
+                    <img class="plane plane-1 img-fluid pe-none z-1 position-absolute" width="100" height="100"
+                        loading="lazy" src="image/service-2.webp" alt="Traveler" aria-hidden="true">
+
+                    <img class="plane plane-2 img-fluid pe-none z-1 position-absolute" width="100" height="100"
+                        loading="lazy" src="image/service-2.webp" alt="Traveler" aria-hidden="true">
+
                 </div>
 
             </div>
         </section>
 
-        <section class="services-section" id="hotels">
+        <section class="services-section position-relative overflow-hidden" id="hotels">
             <div class="container">
-                <div class="dots-grid">
+                <div class="dots-grid position-absolute d-none gap-2">
                     <span>+</span> <span>+</span> <span>+</span> <span>+</span> <span>+</span>
                     <span>+</span> <span>+</span> <span>+</span> <span>+</span> <span>+</span>
                     <span>+</span> <span>+</span> <span>+</span> <span>+</span> <span>+</span>
@@ -112,11 +154,13 @@
                 <div class="row g-4 justify-content-center">
 
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                        <div class="service-card">
-                            <div class="icon-wrap">
-                                <span class="blob blob-peach"></span>
+
+                        <div class="service-card text-center position-relative z-1">
+                            <div
+                                class="icon-wrap position-relative d-inline-flex align-items-end justify-content-center mb-3">
+                                <span class="blob blob-peach position-absolute bottom-0"></span>
                                 <img src="image/service-1.webp" width="100" height="100" loading="lazy"
-                                    class="img-fluid hotel-img" alt="Weather" />
+                                    class="img-fluid hotel-img position-relative z-2" alt="Weather" />
                             </div>
                             <h5 class="card-title">Calculated Weather</h5>
                             <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
@@ -124,12 +168,13 @@
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                        <div class="service-card active"> <!-- ← الكارد المرفوع -->
-                            <div class="icon-wrap">
-                                <span class="blob-two blob-peach"
+                        <div class="service-card active text-center position-relative z-1"> <!-- ← الكارد المرفوع -->
+                            <div
+                                class="icon-wrap position-relative d-inline-flex align-items-end justify-content-center mb-3">
+                                <span class="blob-two blob-peach position-absolute top-0"
                                     style="left:14px;right:auto;border-radius:8px 12px 8px 12px;"></span>
                                 <img src="image/service-2.webp" width="100" height="100" loading="lazy"
-                                    class="img-fluid " alt="Flights" />
+                                    class="img-fluid position-relative z-2" alt="Flights" />
                             </div>
                             <h5 class="card-title">Best Flights</h5>
                             <p class="card-text">Engrossed listening. Park gate sell they west hard for the.</p>
@@ -137,11 +182,12 @@
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                        <div class="service-card">
-                            <div class="icon-wrap">
-                                <span class="blob-two blob-peach"></span>
+                        <div class="service-card text-center position-relative z-1">
+                            <div
+                                class="icon-wrap position-relative d-inline-flex align-items-end justify-content-center mb-3">
+                                <span class="blob-two blob-peach position-absolute top-0"></span>
                                 <img src="image/service-3.webp" width="100" height="100" loading="lazy"
-                                    class="img-fluid" alt="Weather" />
+                                    class="img-fluid position-relative z-2" alt="Weather" />
                             </div>
                             <h5 class="card-title">Calculated Weather</h5>
                             <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
@@ -150,11 +196,12 @@
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                        <div class="service-card">
-                            <div class="icon-wrap">
-                                <span class="blob blob-peach"></span>
+                        <div class="service-card text-center position-relative z-1">
+                            <div
+                                class="icon-wrap position-relative d-inline-flex align-items-end justify-content-center mb-3">
+                                <span class="blob blob-peach position-absolute bottom-0"></span>
                                 <img src="image/service-4.webp" width="100" height="100" loading="lazy"
-                                    class="img-fluid hotel-img" alt="Weather" />
+                                    class="img-fluid hotel-img position-relative z-2" alt="Weather" />
                             </div>
                             <h5 class="card-title">Calculated Weather</h5>
                             <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
@@ -173,24 +220,23 @@
                 <div class="row g-0">
 
                     <div class="col-12 col-sm-6 col-lg-4 px-3 mb-4">
-                        <div class="trip-card">
+                        <div class="trip-card bg-white rounded-4 overflow-hidden d-flex flex-column h-100">
 
-                            <div class="trip_card_image">
-                                <img src="image/app-img-1.webp" class="card-img img-fluid" width="100" height="100"
-                                    loading="lazy" alt="card-img">
+                            <div class="trip_card_image position-relative w-100 overflow-hidden bg-light rounded-top-4">
+                                <img src="image/app-img-1.webp" class="card-img img-fluid d-block w-100 h-100"
+                                    width="100" height="100" loading="lazy" alt="card-img">
                             </div>
 
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column gap-2 pt-3 pb-3 px-3">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <h5 class="card-title">Rome, Italty</h5>
-                                    <p class="card-text">$5,42k</p>
-
+                                    <h5 class="card-title fs-6 fw-bold">Rome, Italty</h5>
+                                    <p class="card-text fs-6 fw-bold">$5,42k</p>
                                 </div>
-                                <div class="d-flex align-items-center gap-2 trip-card__meta">
 
+                                <div
+                                    class="d-flex align-items-center gap-2 trip-card__meta text-secondary fw-medium mt-auto">
                                     <i class="fa-solid fa-paper-plane"></i>
                                     <small class="text-body-secondary">10 Days Trip</small>
-
                                 </div>
 
                             </div>
@@ -198,24 +244,23 @@
                     </div>
 
                     <div class="col-12 col-sm-6 col-lg-4 px-3 mb-4">
-                        <div class="trip-card">
+                        <div class="trip-card bg-white rounded-4 overflow-hidden d-flex flex-column h-100">
 
-                            <div class="trip_card_image">
+                            <div class="trip_card_image position-relative w-100 overflow-hidden bg-light rounded-top-4">
                                 <img src="image/app-img-2.webp" width="100" height="100" loading="lazy"
-                                    class="card-img img-fluid" alt="card_image">
+                                    class="card-img img-fluid d-block w-100 h-100" alt="card_image">
                             </div>
 
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column gap-2 pt-3 pb-3 px-3">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <h5 class="card-title">London, UK</h5>
-                                    <p class="card-text">$4.2k</p>
-
+                                    <h5 class="card-title fs-6 fw-bold">London, UK</h5>
+                                    <p class="card-text fs-6 fw-bold">$4.2k</p>
                                 </div>
-                                <div class="d-flex align-items-center gap-2 trip-card__meta">
 
+                                <div
+                                    class="d-flex align-items-center gap-2 trip-card__meta text-secondary fw-medium mt-auto">
                                     <i class="fa-solid fa-paper-plane"></i>
                                     <small class="text-body-secondary">12 Days Trip</small>
-
                                 </div>
 
                             </div>
@@ -223,24 +268,23 @@
                     </div>
 
                     <div class="col-12 col-sm-6 col-lg-4 px-3 mb-4">
-                        <div class="trip-card">
+                        <div class="trip-card bg-white rounded-4 overflow-hidden d-flex flex-column h-100">
 
-                            <div class="trip_card_image">
-                                <img src="image/app-img-3.webp" class="card-img img-fluid" width="100" height="100"
-                                    loading="lazy" alt="trip_card_image">
+                            <div class="trip_card_image position-relative w-100 overflow-hidden bg-light rounded-top-4">
+                                <img src="image/app-img-3.webp" class="card-img img-fluid d-block w-100 h-100"
+                                    width="100" height="100" loading="lazy" alt="trip_card_image">
                             </div>
 
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column gap-2 pt-3 pb-3 px-3">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <h5 class="card-title">Full Europe</h5>
-                                    <p class="card-text">$15k</p>
-
+                                    <h5 class="card-title fs-6 fw-bold">Full Europe</h5>
+                                    <p class="card-text fs-6 fw-bold">$15k</p>
                                 </div>
-                                <div class="d-flex align-items-center gap-2 trip-card__meta">
 
+                                <div
+                                    class="d-flex align-items-center gap-2 trip-card__meta text-secondary fw-medium mt-auto">
                                     <i class="fa-solid fa-paper-plane"></i>
                                     <small class="text-body-secondary">28 Days Trip</small>
-
                                 </div>
 
                             </div>
@@ -250,80 +294,103 @@
             </div>
         </section>
 
-        <section class="bk" id="booking">
+        <section class="bk overflow-visible" id="booking">
             <div class="container">
-                <div class="bk-grid">
+                <div class="bk-grid d-grid align-items-center gap-5">
 
                     <!-- LEFT -->
                     <div class="bk-left">
-                        <p class="bk-tag">Easy and Fast</p>
-                        <h2 class="bk-title">Book Your Next Trip<br>In 3 Easy Steps</h2>
+                        <p class="bk-tag fs-6 mb-2 fw-semibold">Easy and Fast</p>
+                        <h2 class="bk-title fw-bold mb-5">Book Your Next Trip<br>In 3 Easy Steps</h2>
 
-                        <div class="bk-steps">
+                        <div class="bk-steps d-flex flex-column gap-4">
 
-                            <div class="bk-step">
-                                <div class="bk-icon ic1">
+                            <div class="bk-step d-flex gap-3 align-item-start">
+                                <div
+                                    class="bk-icon ic1 flex-shrink-0 align-items-center justify-content-center d-flex rounded-3 fs-6 text-white">
                                     <i class="fa-solid fa-map-location-dot"></i>
                                 </div>
+
                                 <div class="bk-step-text">
-                                    <h3>Choose Destination</h3>
+                                    <h3 class="fw-bold">Choose Destination</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
                                 </div>
+
                             </div>
 
-                            <div class="bk-step">
-                                <div class="bk-icon ic2">
+                            <div class="bk-step d-flex gap-3 align-item-start">
+                                <div
+                                    class="bk-icon ic2 flex-shrink-0 align-items-center justify-content-center d-flex rounded-3 fs-6 text-white">
                                     <i class="fa-solid fa-person-swimming"></i>
                                 </div>
+
                                 <div class="bk-step-text">
-                                    <h3>Make Payment</h3>
+                                    <h3 class="fw-bold">Make Payment</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
                                 </div>
+
                             </div>
 
-                            <div class="bk-step">
-                                <div class="bk-icon ic3">
+                            <div class="bk-step d-flex gap-3 align-item-start">
+                                <div
+                                    class="bk-icon ic3 flex-shrink-0 align-items-center justify-content-center d-flex rounded-3 fs-6 text-white">
                                     <i class="fa-solid fa-taxi"></i>
                                 </div>
+
                                 <div class="bk-step-text">
-                                    <h3>Reach Airport on Selected Date</h3>
+                                    <h3 class="fw-bold">Reach Airport on Selected Date</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
                                 </div>
+
                             </div>
 
                         </div>
                     </div>
 
                     <!-- RIGHT -->
-                    <div class="bk-right">
+                    <div class="bk-right position-relative d-flex align-items-lg-start justify-content-lg-end">
 
-                        <div class="bk-main-card">
-                            <div class="bk-img-wrap">
-                                <div class="bk-img-placeholder">
-                                    <img src="image/reviews-img.webp" class="img-fluid" width="100" height="100"
-                                        loading="lazy" alt="bk-img">
+                        <div class="bk-main-card rounded-4 bg-white overflow-hidden w-100">
+
+                            <div class="bk-img-wrap w-100 overflow-hidden">
+                                <div
+                                    class="bk-img-placeholder w-100 h-100 d-flex align-items-center justify-content-center">
+                                    <img src="image/reviews-img.webp" class="img-fluid w-100 h-100 d-block" width="100"
+                                        height="100" loading="lazy" alt="bk-img">
                                 </div>
+
                             </div>
 
                             <div class="bk-card-body">
-                                <p class="bk-card-title">Trip To Greece</p>
+                                <p class="bk-card-title fw-bold fs-6">Trip To Greece</p>
                                 <p class="bk-card-sub">14-29 June &nbsp;|&nbsp; by Robbin Joseph</p>
 
-                                <div class="bk-card-icons">
-                                    <div class="bk-icon-btn"><i class="fa-solid fa-leaf"></i></div>
-                                    <div class="bk-icon-btn"><i class="fa-brands fa-hive"></i></div>
-                                    <div class="bk-icon-btn"><i class="fa-solid fa-location-arrow"></i></div>
+                                <div class="bk-card-icons mb-3 gap-2 d-flex">
+                                    <div
+                                        class="bk-icon-btn rounded-circle d-flex justify-content-center align-items-center">
+                                        <i class="fa-solid fa-leaf"></i>
+                                    </div>
+                                    <div
+                                        class="bk-icon-btn rounded-circle d-flex justify-content-center align-items-center">
+                                        <i class="fa-brands fa-hive"></i>
+                                    </div>
+                                    <div
+                                        class="bk-icon-btn rounded-circle d-flex justify-content-center align-items-center">
+                                        <i class="fa-solid fa-location-arrow"></i>
+                                    </div>
                                 </div>
 
-                                <div class="bk-card-footer">
-                                    <div class="bk-going">
+                                <div class="bk-card-footer pt-3 d-flex justify-content-between align-items-center">
+                                    <div class="bk-going d-flex align-aitems-center gap-2">
                                         <i class="fa-solid fa-house-lock"></i>
                                         24 people going
                                     </div>
-                                    <div class="bk-heart">
+                                    <div
+                                        class="bk-heart rounded-circle d-flex align-items-center justify-content-center">
                                         <i class="fa-solid fa-heart"></i>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
@@ -544,13 +611,13 @@
     <footer>
         <div class="container">
             <div class="footer-top">
-    
+
                 <!-- Brand -->
                 <div class="footer-brand">
                     <p class="footer-brand-name">Jad<span>o</span><span>o</span></p>
                     <p class="footer-brand-desc">Book your trip in minute, get full control for much longer.</p>
                 </div>
-    
+
                 <!-- Company -->
                 <div class="footer-col">
                     <h4>Company</h4>
@@ -560,7 +627,7 @@
                         <li><a href="#">Mobile</a></li>
                     </ul>
                 </div>
-    
+
                 <!-- Contact -->
                 <div class="footer-col">
                     <h4>Contact</h4>
@@ -570,7 +637,7 @@
                         <li><a href="#">Affiliates</a></li>
                     </ul>
                 </div>
-    
+
                 <!-- More -->
                 <div class="footer-col">
                     <h4>More</h4>
@@ -580,7 +647,7 @@
                         <li><a href="#">Low fare tips</a></li>
                     </ul>
                 </div>
-    
+
                 <!-- Social + App -->
                 <div class="footer-social-col">
                     <div class="footer-socials">
@@ -607,9 +674,9 @@
                             </svg>
                         </a>
                     </div>
-    
+
                     <p class="footer-app-label">Discover our app</p>
-    
+
                     <div class="app-badges">
                         <!-- Google Play -->
                         <a href="#" class="app-badge">
@@ -634,9 +701,9 @@
                         </a>
                     </div>
                 </div>
-    
+
             </div>
-    
+
             <div class="footer-bottom">
                 <p>All rights reserved &copy; jadoo.co</p>
             </div>
