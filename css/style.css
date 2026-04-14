@@ -263,6 +263,27 @@ section {
     display: none;
 }
 
+[data-i18n],
+[data-i18n-html],
+[data-i18n-attr] {
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.lang-animating [data-i18n],
+.lang-animating [data-i18n-html],
+.lang-animating [data-i18n-attr] {
+    opacity: 0.45;
+    transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-i18n],
+    [data-i18n-html],
+    [data-i18n-attr] {
+        transition: none;
+    }
+}
+
 /* hero */
 .hero {
     margin-top: 5rem;
