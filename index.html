@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -49,28 +49,34 @@
 
                     <li>
                         <a class="nav-link active" title="Destinations" aria-label="Destinations"
+                            data-i18n="nav.destinations" data-i18n-attr="title:nav.destinations;aria-label:nav.destinations"
                             href="#destination">Destinations</a>
                     </li>
 
                     <li>
-                        <a class="nav-link" title="Hotels" aria-label="Hotels" href="#hotels">
+                        <a class="nav-link" title="Hotels" aria-label="Hotels"
+                            data-i18n="nav.hotels" data-i18n-attr="title:nav.hotels;aria-label:nav.hotels" href="#hotels">
                             Hotels
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" title="Flights" aria-label="Flights" href="#flights">
+                        <a class="nav-link" title="Flights" aria-label="Flights"
+                            data-i18n="nav.flights" data-i18n-attr="title:nav.flights;aria-label:nav.flights" href="#flights">
                             Flights
                         </a>
                     </li>
 
                     <li>
-                        <a class="nav-link" title="booking" aria-label="booking" href="#booking">
+                        <a class="nav-link" title="booking" aria-label="booking"
+                            data-i18n="nav.booking" data-i18n-attr="title:nav.booking;aria-label:nav.booking" href="#booking">
                             booking
                         </a>
                     </li>
 
                     <li>
-                        <a class="nav-link" title="testimonials" aria-label="testimonials" href="#testimonials">
+                        <a class="nav-link" title="testimonials" aria-label="testimonials"
+                            data-i18n="nav.testimonials" data-i18n-attr="title:nav.testimonials;aria-label:nav.testimonials"
+                            href="#testimonials">
                             testimonials
                         </a>
                     </li>
@@ -80,10 +86,22 @@
                 <div class="nav-actions d-flex align-items-center justify-content-center gap-3">
 
                     <a class="btn  d-inline-flex align-items-center justify-content-center fw-semibold rounded-3"
-                        title="Sign up" aria-label="Sign up" href="#sign-up">Sign up</a>
+                        title="Sign up" aria-label="Sign up" data-i18n="nav.signup"
+                        data-i18n-attr="title:nav.signup;aria-label:nav.signup" href="#sign-up">Sign up</a>
 
-                    <button class="lang d-inline-flex align-items-center gap-1 fw-semibold bg-white border-0 text-dark"
-                        type="button">EN <i class="fa-solid fa-angle-down"></i></button>
+                    <div class="lang-dropdown position-relative">
+                        <button
+                            class="lang-trigger d-inline-flex align-items-center gap-1 fw-semibold bg-white border-0 text-dark"
+                            type="button" aria-haspopup="listbox" aria-expanded="false"
+                            data-i18n-attr="aria-label:lang.aria">
+                            <span class="lang-current" data-i18n="lang.code">EN</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <div class="lang-menu" role="listbox" aria-label="Language">
+                            <button class="lang-option" type="button" data-lang="en" aria-label="English">EN</button>
+                            <button class="lang-option" type="button" data-lang="ar" aria-label="العربية">AR</button>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -102,23 +120,26 @@
             <div class="container hero-inner align-items-center d-grid gap-4">
                 <div class="hero-content position-relative">
 
-                    <span class="hero-tag d-inline-block text-uppercase fw-bold mb-4">BEST DESTINATIONS AROUND THE
+                    <span class="hero-tag d-inline-block text-uppercase fw-bold mb-4"
+                        data-i18n="hero.tag">BEST DESTINATIONS AROUND THE
                         WORLD</span>
-                    <h1 class="hero-title lh-sm mb-4">Travel, <span
+                    <h1 class="hero-title lh-sm mb-4" data-i18n-html="hero.title">Travel, <span
                             class="underline d-inline-block position-relative">enjoy</span> and live a new and full life
                     </h1>
-                    <p class="hero-text mb-4">
+                    <p class="hero-text mb-4" data-i18n="hero.text">
                         Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it
                         engrossed listening. Park gate sell they west hard for the.
                     </p>
 
                     <div class="hero-actions d-flex align-items-center flex-wrap gap-4">
-                        <a href="#more" title="Find out more" aria-label="Find out more " class="btn text-white">Find
+                        <a href="#more" title="Find out more" aria-label="Find out more " class="btn text-white"
+                            data-i18n="hero.cta" data-i18n-attr="title:hero.cta;aria-label:hero.cta">Find
                             out more</a>
                         <a href="#demo" title="Play Demo" aria-label="Play Demo"
+                            data-i18n-attr="title:hero.play;aria-label:hero.play"
                             class="play d-inline-flex align-items-center fw-semibold gap-3">
                             <span class="play-icon d-grid rounded-circle"></span>
-                            <span class="play-text fs-6">Play Demo</span>
+                            <span class="play-text fs-6" data-i18n="hero.play">Play Demo</span>
                         </a>
                     </div>
                 </div>
@@ -149,8 +170,8 @@
                     <span>+</span> <span>+</span> <span>+</span> <span>+</span> <span>+</span>
                 </div>
                 <div class="text-center mb-5">
-                    <p class="section__subtitle">CATEGORY</p>
-                    <h2 class="section__title">We Offer Best Services</h2>
+                    <p class="section__subtitle" data-i18n="services.subtitle">CATEGORY</p>
+                    <h2 class="section__title" data-i18n="services.title">We Offer Best Services</h2>
                 </div>
                 <div class="row g-4 justify-content-center">
 
@@ -163,8 +184,8 @@
                                 <img src="image/service-1.webp" width="100" height="100" loading="lazy"
                                     class="img-fluid hotel-img position-relative z-2" alt="Weather" />
                             </div>
-                            <h5 class="card-title">Calculated Weather</h5>
-                            <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
+                            <h5 class="card-title" data-i18n="services.weather.title">Calculated Weather</h5>
+                            <p class="card-text" data-i18n="services.weather.text">Built Wicket longer admire do barton vanity itself do in it.</p>
                         </div>
                     </div>
 
@@ -177,8 +198,8 @@
                                 <img src="image/service-2.webp" width="100" height="100" loading="lazy"
                                     class="img-fluid position-relative z-2" alt="Flights" />
                             </div>
-                            <h5 class="card-title">Best Flights</h5>
-                            <p class="card-text">Engrossed listening. Park gate sell they west hard for the.</p>
+                            <h5 class="card-title" data-i18n="services.flights.title">Best Flights</h5>
+                            <p class="card-text" data-i18n="services.flights.text">Engrossed listening. Park gate sell they west hard for the.</p>
                         </div>
                     </div>
 
@@ -190,8 +211,8 @@
                                 <img src="image/service-3.webp" width="100" height="100" loading="lazy"
                                     class="img-fluid position-relative z-2" alt="Weather" />
                             </div>
-                            <h5 class="card-title">Calculated Weather</h5>
-                            <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
+                            <h5 class="card-title" data-i18n="services.weather.title">Calculated Weather</h5>
+                            <p class="card-text" data-i18n="services.weather.text">Built Wicket longer admire do barton vanity itself do in it.</p>
                         </div>
 
                     </div>
@@ -204,8 +225,8 @@
                                 <img src="image/service-4.webp" width="100" height="100" loading="lazy"
                                     class="img-fluid hotel-img position-relative z-2" alt="Weather" />
                             </div>
-                            <h5 class="card-title">Calculated Weather</h5>
-                            <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
+                            <h5 class="card-title" data-i18n="services.weather.title">Calculated Weather</h5>
+                            <p class="card-text" data-i18n="services.weather.text">Built Wicket longer admire do barton vanity itself do in it.</p>
                         </div>
                     </div>
                 </div>
@@ -215,8 +236,8 @@
         <section class="flights-section" id="flights">
             <div class="container">
 
-                <h2 class="section__subtitle">TOP SELLING</h2>
-                <h3 class="section__title">Top Destinations</h3>
+                <h2 class="section__subtitle" data-i18n="flights.subtitle">TOP SELLING</h2>
+                <h3 class="section__title" data-i18n="flights.title">Top Destinations</h3>
 
                 <div class="row g-0">
 
@@ -230,14 +251,14 @@
 
                             <div class="card-body d-flex flex-column gap-2 pt-3 pb-3 px-3">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <h5 class="card-title fs-6 fw-bold">Rome, Italty</h5>
+                                    <h5 class="card-title fs-6 fw-bold" data-i18n="flights.rome.title">Rome, Italty</h5>
                                     <p class="card-text fs-6 fw-bold">$5,42k</p>
                                 </div>
 
                                 <div
                                     class="d-flex align-items-center gap-2 trip-card__meta text-secondary fw-medium mt-auto">
                                     <i class="fa-solid fa-paper-plane"></i>
-                                    <small class="text-body-secondary">10 Days Trip</small>
+                                    <small class="text-body-secondary" data-i18n="flights.rome.days">10 Days Trip</small>
                                 </div>
 
                             </div>
@@ -254,14 +275,14 @@
 
                             <div class="card-body d-flex flex-column gap-2 pt-3 pb-3 px-3">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <h5 class="card-title fs-6 fw-bold">London, UK</h5>
+                                    <h5 class="card-title fs-6 fw-bold" data-i18n="flights.london.title">London, UK</h5>
                                     <p class="card-text fs-6 fw-bold">$4.2k</p>
                                 </div>
 
                                 <div
                                     class="d-flex align-items-center gap-2 trip-card__meta text-secondary fw-medium mt-auto">
                                     <i class="fa-solid fa-paper-plane"></i>
-                                    <small class="text-body-secondary">12 Days Trip</small>
+                                    <small class="text-body-secondary" data-i18n="flights.london.days">12 Days Trip</small>
                                 </div>
 
                             </div>
@@ -278,14 +299,14 @@
 
                             <div class="card-body d-flex flex-column gap-2 pt-3 pb-3 px-3">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
-                                    <h5 class="card-title fs-6 fw-bold">Full Europe</h5>
+                                    <h5 class="card-title fs-6 fw-bold" data-i18n="flights.europe.title">Full Europe</h5>
                                     <p class="card-text fs-6 fw-bold">$15k</p>
                                 </div>
 
                                 <div
                                     class="d-flex align-items-center gap-2 trip-card__meta text-secondary fw-medium mt-auto">
                                     <i class="fa-solid fa-paper-plane"></i>
-                                    <small class="text-body-secondary">28 Days Trip</small>
+                                    <small class="text-body-secondary" data-i18n="flights.europe.days">28 Days Trip</small>
                                 </div>
 
                             </div>
@@ -301,8 +322,8 @@
 
                     <!-- LEFT -->
                     <div class="bk-left">
-                        <p class="bk-tag fs-6 mb-2 fw-semibold">Easy and Fast</p>
-                        <h2 class="bk-title fw-bold mb-5">Book Your Next Trip<br>In 3 Easy Steps</h2>
+                        <p class="bk-tag fs-6 mb-2 fw-semibold" data-i18n="booking.tag">Easy and Fast</p>
+                        <h2 class="bk-title fw-bold mb-5" data-i18n-html="booking.title">Book Your Next Trip<br>In 3 Easy Steps</h2>
 
                         <div class="bk-steps d-flex flex-column gap-4">
 
@@ -313,8 +334,8 @@
                                 </div>
 
                                 <div class="bk-step-text">
-                                    <h3 class="fw-bold">Choose Destination</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                                    <h3 class="fw-bold" data-i18n="booking.step1.title">Choose Destination</h3>
+                                    <p data-i18n="booking.step.text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
                                 </div>
 
                             </div>
@@ -326,8 +347,8 @@
                                 </div>
 
                                 <div class="bk-step-text">
-                                    <h3 class="fw-bold">Make Payment</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                                    <h3 class="fw-bold" data-i18n="booking.step2.title">Make Payment</h3>
+                                    <p data-i18n="booking.step.text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
                                 </div>
 
                             </div>
@@ -339,8 +360,8 @@
                                 </div>
 
                                 <div class="bk-step-text">
-                                    <h3 class="fw-bold">Reach Airport on Selected Date</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                                    <h3 class="fw-bold" data-i18n="booking.step3.title">Reach Airport on Selected Date</h3>
+                                    <p data-i18n="booking.step.text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
                                 </div>
 
                             </div>
@@ -363,8 +384,8 @@
                             </div>
 
                             <div class="bk-card-body">
-                                <p class="bk-card-title fw-bold fs-6">Trip To Greece</p>
-                                <p class="bk-card-sub">14-29 June &nbsp;|&nbsp; by Robbin Joseph</p>
+                                <p class="bk-card-title fw-bold fs-6" data-i18n="booking.card.title">Trip To Greece</p>
+                                <p class="bk-card-sub" data-i18n-html="booking.card.sub">14-29 June &nbsp;|&nbsp; by Robbin Joseph</p>
 
                                 <div class="bk-card-icons mb-3 gap-2 d-flex">
                                     <div
@@ -384,7 +405,7 @@
                                 <div class="bk-card-footer pt-3 d-flex justify-content-between align-items-center">
                                     <div class="bk-going d-flex align-aitems-center gap-2">
                                         <i class="fa-solid fa-house-lock"></i>
-                                        24 people going
+                                        <span data-i18n="booking.card.going">24 people going</span>
                                     </div>
                                     <div
                                         class="bk-heart rounded-circle d-flex align-items-center justify-content-center">
@@ -403,12 +424,12 @@
                                 <i class="fa-solid fa-city"></i>
                             </div>
                             <div class="mini-info">
-                                <p class="mini-label fw-bold text-uppercase mb-0">Ongoing</p>
-                                <p class="mini-title fw-bold mb-3">Trip to Rome</p>
+                                <p class="mini-label fw-bold text-uppercase mb-0" data-i18n="booking.mini.label">Ongoing</p>
+                                <p class="mini-title fw-bold mb-3" data-i18n="booking.mini.title">Trip to Rome</p>
                                 <div class="mini-progress-wrap rounded-pill overflow-hidden">
                                     <div class="mini-progress-bar h-100 rounded-pill"></div>
                                 </div>
-                                <p class="mini-pct fw-bold mt-1">40% completed</p>
+                                <p class="mini-pct fw-bold mt-1" data-i18n="booking.mini.pct">40% completed</p>
                             </div>
                         </div>
 
@@ -423,8 +444,8 @@
 
                     <!-- ===== LEFT ===== -->
                     <div class="testimonials__left  px-2">
-                        <p class="testimonials__subtitle fw-bold text-uppercase mb-3">Testimonials</p>
-                        <h2 class="testimonials__title fw-bold mb-5">What People Say About Us.</h2>
+                        <p class="testimonials__subtitle fw-bold text-uppercase mb-3" data-i18n="testimonials.subtitle">Testimonials</p>
+                        <h2 class="testimonials__title fw-bold mb-5" data-i18n="testimonials.title">What People Say About Us.</h2>
                         <div class="testimonials-pagination d-flex align-items-center gap-2"></div>
                     </div>
 
@@ -449,7 +470,7 @@
                                             </div>
                                             <!-- full (تظهر لما الكارد active) -->
                                             <div class="t-full">
-                                                <p class="t-quote">On the Windows talking painted pasture yet its
+                                                <p class="t-quote" data-i18n="testimonials.quote1">On the Windows talking painted pasture yet its
                                                     express parties use. Sure last upon he same as knew next. Of
                                                     believed or diverted no.</p>
                                                 <div class="t-divider"></div>
@@ -479,7 +500,7 @@
                                                 <span class="t-mini-loc">CEO of Red Button</span>
                                             </div>
                                             <div class="t-full">
-                                                <p class="t-quote">Believed or diverted no. Of believed admire do barton
+                                                <p class="t-quote" data-i18n="testimonials.quote2">Believed or diverted no. Of believed admire do barton
                                                     vanity itself do. Windows talking painted pasture yet its express
                                                     parties use.</p>
                                                 <div class="t-divider"></div>
@@ -511,7 +532,7 @@
                                             </div>
 
                                             <div class="t-full">
-                                                <p class="t-quote">Sure last upon he same as knew next. Of believed or
+                                                <p class="t-quote" data-i18n="testimonials.quote3">Sure last upon he same as knew next. Of believed or
                                                     diverted no. Express parties use painting pasture yet its windows
                                                     talking.</p>
                                                 <div class="t-divider"></div>
@@ -601,7 +622,7 @@
                         <span></span><span></span><span></span>
                     </div>
 
-                    <h2 class="sub-title text-center position-relative z-1 mx-auto mb-4">
+                    <h2 class="sub-title text-center position-relative z-1 mx-auto mb-4" data-i18n="sub.title">
                         Subscribe to get information, latest news and other interesting offers about Jadoo
                     </h2>
 
@@ -612,8 +633,9 @@
                                 <polyline points="22,6 12,13 2,6" />
                             </svg>
                         </div>
-                        <input class="sub-input border-0 bg-transparent flex-grow-1 p-2" type="email" placeholder="Your email" />
-                        <button class="sub-btn">Subscribe</button>
+                        <input class="sub-input border-0 bg-transparent flex-grow-1 p-2" type="email"
+                            placeholder="Your email" data-i18n-attr="placeholder:sub.email" />
+                        <button class="sub-btn" data-i18n="sub.button">Subscribe</button>
                     </div>
                 </div>
             </div>
@@ -628,36 +650,36 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <p class="footer-brand-name fw-bold mb-3 fs-2">Jad<span>o</span><span>o</span></p>
-                    <p class="footer-brand-desc">Book your trip in minute, get full control for much longer.</p>
+                    <p class="footer-brand-desc" data-i18n="footer.brand.desc">Book your trip in minute, get full control for much longer.</p>
                 </div>
 
                 <!-- Company -->
                 <div class="footer-col">
-                    <h4 class="fw-bold text-start mb-3 ms-1">Company</h4>
+                    <h4 class="fw-bold text-start mb-3 ms-1" data-i18n="footer.company.title">Company</h4>
                     <ul class="list-unstyled d-flex flex-column gap-2 text-start">
-                        <li><a href="#" title="About Jadoo" aria-label="About Jadoo">About</a></li>
-                        <li><a href="#" title="Careers at Jadoo" aria-label="Careers at Jadoo">Careers</a></li>
-                        <li><a href="#" title="Mobile App" aria-label="Mobile App">Mobile</a></li>
+                        <li><a href="#" title="About Jadoo" aria-label="About Jadoo" data-i18n="footer.company.about">About</a></li>
+                        <li><a href="#" title="Careers at Jadoo" aria-label="Careers at Jadoo" data-i18n="footer.company.careers">Careers</a></li>
+                        <li><a href="#" title="Mobile App" aria-label="Mobile App" data-i18n="footer.company.mobile">Mobile</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
                 <div class="footer-col">
-                    <h4 class="fw-bold text-start mb-3 ms-1">Contact</h4>
+                    <h4 class="fw-bold text-start mb-3 ms-1" data-i18n="footer.contact.title">Contact</h4>
                     <ul class="list-unstyled d-flex flex-column gap-2 text-start">
-                        <li><a href="#" title="Help/FAQ" aria-label="Help/FAQ">Help/FAQ</a></li>
-                        <li><a href="#" title="Press" aria-label="Press">Press</a></li>
-                        <li><a href="#" title="Affiliates" aria-label="Affiliates">Affiliates</a></li>
+                        <li><a href="#" title="Help/FAQ" aria-label="Help/FAQ" data-i18n="footer.contact.help">Help/FAQ</a></li>
+                        <li><a href="#" title="Press" aria-label="Press" data-i18n="footer.contact.press">Press</a></li>
+                        <li><a href="#" title="Affiliates" aria-label="Affiliates" data-i18n="footer.contact.affiliates">Affiliates</a></li>
                     </ul>
                 </div>
 
                 <!-- More -->
                 <div class="footer-col">
-                    <h4 class="fw-bold text-start mb-3 ms-1">More</h4>
+                    <h4 class="fw-bold text-start mb-3 ms-1" data-i18n="footer.more.title">More</h4>
                     <ul class="list-unstyled d-flex flex-column gap-2 text-start">
-                        <li><a href="#" title="Airline fees" aria-label="Airline fees">Airline fees</a></li>
-                        <li><a href="#" title="Airline" aria-label="Airline">Airline</a></li>
-                        <li><a href="#" title="Low fare tips" aria-label="Low fare tips">Low fare tips</a></li>
+                        <li><a href="#" title="Airline fees" aria-label="Airline fees" data-i18n="footer.more.fees">Airline fees</a></li>
+                        <li><a href="#" title="Airline" aria-label="Airline" data-i18n="footer.more.airline">Airline</a></li>
+                        <li><a href="#" title="Low fare tips" aria-label="Low fare tips" data-i18n="footer.more.tips">Low fare tips</a></li>
                     </ul>
                 </div>
 
@@ -688,23 +710,23 @@
                         </a>
                     </div>
 
-                    <p class="footer-app-label ">Discover our app</p>
+                    <p class="footer-app-label " data-i18n="footer.app.label">Discover our app</p>
 
                     <div class="app-badges">
                         <!-- Google Play -->
                         <a href="#" title="Google Play" aria-label="Google Play" class="app-badge">
                             <i class="fa-brands fa-google-play"></i>
                             <div class="badge-text">
-                                <small class="d-block">Get it on</small>
-                                <span class="fw-bold">Google Play</span>
+                                <small class="d-block" data-i18n="footer.app.get">Get it on</small>
+                                <span class="fw-bold" data-i18n="footer.app.google">Google Play</span>
                             </div>
                         </a>
                         <!-- App Store -->
                         <a href="#" title="App Store" aria-label="App Store" class="app-badge">
                             <i class="fa-brands fa-apple"></i>
                             <div class="badge-text">
-                                <small class="d-block">Download on the</small>
-                                <span class="fw-bold">App Store</span>
+                                <small class="d-block" data-i18n="footer.app.download">Download on the</small>
+                                <span class="fw-bold" data-i18n="footer.app.store">App Store</span>
                             </div>
                         </a>
                     </div>
@@ -713,7 +735,7 @@
             </div>
 
             <div class="footer-bottom text-center m-auto">
-                <p>All rights reserved &copy; jadoo.co</p>
+                <p data-i18n="footer.rights">All rights reserved &copy; jadoo.co</p>
             </div>
 
         </div>
